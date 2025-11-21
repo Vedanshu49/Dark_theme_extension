@@ -1,0 +1,23 @@
+{
+  "name": "smart-dark-theme-extension",
+  "version": "1.0.0",
+  "description": "Intelligent dark theme browser extension with smart DOM analysis",
+  "scripts": {
+    "lint": "eslint src/ --ext .js",
+    "format": "prettier --write src/",
+    "test": "jest"
+  },
+  "keywords": [
+    "dark-theme",
+    "browser-extension",
+    "manifest-v3",
+    "accessibility"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0",
+    "jest": "^29.0.0"
+  }
+}

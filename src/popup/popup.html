@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Dark Theme</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1>Smart Dark Theme</h1>
+      <p class="subtitle">Intelligent Theme Control</p>
+    </div>
+
+    <!-- Master Toggle -->
+    <div class="control-group">
+      <div class="toggle-header">
+        <label for="masterToggle" class="label">Theme Status</label>
+        <label class="switch">
+          <input type="checkbox" id="masterToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <p class="site-info" id="siteInfo">Loading...</p>
+    </div>
+
+    <!-- Sliders -->
+    <div class="control-group" id="sliderContainer" style="display: none;">
+      <!-- Brightness -->
+      <div class="slider-wrapper">
+        <div class="slider-header">
+          <label for="brightnessSlider">Brightness</label>
+          <span class="slider-value" id="brightnessValue">100%</span>
+        </div>
+        <input 
+          type="range" 
+          id="brightnessSlider" 
+          class="slider-input" 
+          min="0.5" 
+          max="1.5" 
+          step="0.1" 
+          value="1"
+        >
+      </div>
+
+      <!-- Contrast -->
+      <div class="slider-wrapper">
+        <div class="slider-header">
+          <label for="contrastSlider">Contrast</label>
+          <span class="slider-value" id="contrastValue">100%</span>
+        </div>
+        <input 
+          type="range" 
+          id="contrastSlider" 
+          class="slider-input" 
+          min="0.5" 
+          max="2" 
+          step="0.1" 
+          value="1"
+        >
+      </div>
+
+      <!-- Warmth/Sepia -->
+      <div class="slider-wrapper">
+        <div class="slider-header">
+          <label for="warmthSlider">Warmth (Blue Light Filter)</label>
+          <span class="slider-value" id="warmthValue">0%</span>
+        </div>
+        <input 
+          type="range" 
+          id="warmthSlider" 
+          class="slider-input" 
+          min="0" 
+          max="1" 
+          step="0.1" 
+          value="0"
+        >
+      </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="action-group" id="actionGroup" style="display: none;">
+      <button id="resetBtn" class="btn btn-secondary">Reset to Defaults</button>
+      <button id="settingsBtn" class="btn btn-secondary">More Settings</button>
+    </div>
+
+    <!-- Status Message -->
+    <div class="status-message" id="statusMessage"></div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>v1.0.0 • Made with precision</p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
